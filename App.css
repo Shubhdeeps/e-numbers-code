@@ -1,0 +1,128 @@
+*{
+  overflow: hidden;
+
+}
+
+.App{
+  background: none;
+  display: grid;
+  grid-template-rows: 5vh 5vh 10vh 10vh 5vh 40vh 10vh 15vh;
+  grid-template-columns: 5vw 20vw 25vw 12vw 13vw 10vw 15vw;
+}
+
+#vector-1{
+  grid-row-start: 5;
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+
+#product{
+  grid-row-start: 4;
+  grid-column-start: 5;
+  grid-column-end: 6;
+
+  z-index: 2;
+}
+
+.App h1{
+  font-family: Rockwell Condensed;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 35px;
+
+color: #FD5F00;
+ grid-row-start: 8;
+ grid-column-start: 5;
+ grid-column-end: 8;
+}
+
+.App p{
+  font-family: Roboto;
+  font-style: normal;
+  grid-row-start: 8;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.App p span{
+  color: #FD5F00;
+ 
+}
+
+.App ul{
+  padding: 0px;
+  font-size: 22px;
+  grid-row-start: 4;
+  grid-row-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.pop-up{
+  background:	rgb(0,0,0, 0.5);
+  width: 100vw;
+  height: 100vw;
+  z-index: 99;
+}
+
+.text-container{
+  grid-row: 4 / 8;
+  grid-column: 2 / 5;
+  
+ font-size: 26px;
+ font-weight: 500;
+}
+
+.text-container p span{
+  font-weight: 700;
+}
+
+#ing{
+  grid-row: 3 / 6;
+  grid-column: 5 / 8;
+}
+
+
+@media (max-width: 500px){
+  
+  #product{
+    display: none;
+  }
+  #vector-1{
+    display: none;
+  }
+  .App h1{
+    display: none;
+  }
+  .App ul{
+    padding: 0px;
+    font-size: 16px;
+    grid-column-start: 2;
+    grid-column-end: 7;
+  }
+ .App p{
+  grid-column-start: 2;
+  grid-column-end: 7;
+ }
+ #appbar{
+  grid-column: 1;
+ }
+ #inputBox{
+  grid-column-start: 1;
+  grid-column-end: 2;
+ }
+ 
+#filter-container{
+  display: none;
+
+}
+
+#ing{
+  display: none;
+}
+.text-container{
+  font-size: 16px;
+  grid-column: 2 / 7;
+}
+}
