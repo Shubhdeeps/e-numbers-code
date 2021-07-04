@@ -1,33 +1,23 @@
 import './CSS/filter.css'
+import { Link } from 'react-router-dom';
 
 
 
-
-const Filter = ({filterItems, setValue}) => {
-
-  const handleClick = (e) => {
-
-  
-   
-    setValue(e.target.firstChild.wholeText.replace(/ /g, ""))
-
-  }
-  const handleClick1 = (e) => {
-    e.stopPropagation();
-  setValue(e.target.parentNode.firstChild.wholeText.replace(/ /g, ""))
-  }
-
+const Filter = ({filterItems}) => {
 
     return(
       <div id='parent-filter'>
       <div id='filter-container'>
          {filterItems.map(x =>{
-            return(
-               <p id='filter' key={x.Number}
-               onClick={(e) => handleClick(e)}
-               > {x.Number} <span  onClick={(e) => handleClick1(e)}> {x.Name} </span> 
-              </p> 
-              )
+          return(
+           
+               <p id='filter' key={x.Number}>
+                  <Link to={`/${x.Number}`} style={{ textDecoration: 'none'  }}>
+                 {x.Number} <span> {x.Name} </span>
+                 </Link>
+              </p>
+          ) 
+             
          })}
       </div>
       </div>
